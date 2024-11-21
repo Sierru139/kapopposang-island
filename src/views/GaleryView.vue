@@ -1,11 +1,11 @@
 <script setup>
 import TheWelcome from '../components/TheWelcome.vue'
-import HeroHeader from '../components/HeroHeader.vue'
 </script>
 
 <template>
   <main>
-    <HeroHeader />
-
+    <TheWelcome />
+    
+    <TheWelcome />
   </main>
 </template>
