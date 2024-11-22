@@ -14,7 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
       </nav>
       <div class="text-2xl">
         <button>
-          <img src="@/assets/indonesia-flag.webp" alt=""
+          <img src="@/assets/images/icon/indonesia-flag.webp" alt=""
                class="drop-shadow-lg rounded-lg w-12"
                >
           </button>
