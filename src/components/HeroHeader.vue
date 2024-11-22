@@ -14,7 +14,7 @@ export default {
     },
     mounted () {
         axios
-        .get('http://api.weatherapi.com/v1/current.json?key=2411d6734b5d4bd5802132739242111&q=Makassar&aqi=no')
+        .get('https://api.weatherapi.com/v1/current.json?key=2411d6734b5d4bd5802132739242111&q=Makassar&aqi=no')
         .then(response => (this.wheather = response))
         .catch(error => console.error(error));
     }
