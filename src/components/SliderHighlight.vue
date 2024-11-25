@@ -3,35 +3,37 @@
 
 
 <template>
-    <div class="h-screen max-w-[1280px] mx-auto">
+    <div class="max-w-[1280px] mx-auto mb-10">
         <div class="max-w-[800px] mx-auto">
-            <h1 class="md:text-4xl max-md:mx-8 text-2xl text-center gradientHighlight">Tempat wisata yang memiliki <b>Keindahan Bawah Laut</b> yang mengagumkan, selain itu pulau ini juga <b>Memiliki Pasir Putih yang Bersih</b></h1>
+            <h1 class="lg:text-4xl max-lg:mx-8 text-2xl text-center gradientHighlight">Tempat wisata yang memiliki <b>Keindahan Bawah Laut</b> yang mengagumkan, selain itu pulau ini juga <b>Memiliki Pasir Putih yang Bersih</b></h1>
             <p class="text-center mt-6">
                 <RouterLink to="/about" class="text-white bg-[#739072] hover:opacity-75 duration-150 rounded-md px-3 py-2">
                     Lebih Detail
                 </RouterLink>
             </p>
         </div>
-        <div class="mt-16 max-md:m-6">
-            <h2 class="font-bold md:text-3xl text-xl mb-6">Pesona Pulau Kapopposang</h2>
+        <div class="mt-16 max-lg:m-6">
+            <h2 class="font-bold lg:text-3xl text-xl mb-6">Pesona Pulau Kapopposang</h2>
             <div class="">
-                <div class="flex max-md:flex-col md:h-[500px] h-[60vh] w-full text-white md:gap-x-6 max-md:gap-y-5">
+                <div class="flex max-lg:flex-col h-full w-full text-white">
                     <div v-for="(slider, index) in sliders" :key="index" 
-                        class="parent group hover:brightness-100 rounded-xl overflow-hidden relative flex items-end md:p-8 p-4 md:duration-1000 duration-[2s] linear h-full min-h-[70px]"
+                        class="parent group hover:brightness-100 overflow-hidden lg:duration-1000 duration-[2s] linear px-2 py-2"
                         :class="{
-                                'flex-shrink-0': index == hovered,
-                                'brightness-50': index != hovered,
-                            }"
-                                @mouseover="indexAnu(index)"
-                                @mouseleave="resetHover()"
-                                >
-                        <div class="absolute inset-0 -z-10 flex items-center justify-center">
-                            <img :src="slider.img" alt="" class="object-cover h-full min-w-[900px]">
-                        </div>
-                        <div class="md:min-w-[700px] children group-hover:opacity-100 transition-opacity duration-[1s]"
-                            :class="{'opacity-0' : index != hovered}">
-                            <h4 class="md:text-4xl text-xl font-semibold mb-4">{{ slider.title }}</h4>
-                            <p class="md:w-[700px] max-md:text-sm">{{ slider.description }}</p>
+                            'flex-shrink-0': index == hovered,
+                            'brightness-50': index != hovered,
+                        }"
+                            @mouseover="indexAnu(index)"
+                            @mouseleave="resetHover()"
+                            >
+                        <div class="relative h-full w-full rounded-2xl overflow-hidden p-6 flex items-end">
+                            <div class="absolute inset-0 -z-10 flex items-center justify-center">
+                                <img :src="slider.img" alt="" class="object-cover h-full min-w-[1200px]">
+                            </div>
+                            <div class="lg:min-w-[700px] children group-hover:opacity-100 transition-opacity duration-[1s]"
+                                :class="{'opacity-0' : index != hovered}">
+                                <h4 class="lg:text-4xl text-xl font-semibold mb-4">{{ slider.title }}</h4>
+                                <p class="lg:w-[700px] max-lg:text-sm">{{ slider.description }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

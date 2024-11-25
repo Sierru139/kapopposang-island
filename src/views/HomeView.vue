@@ -2,6 +2,7 @@
 import TheWelcome from '../components/TheWelcome.vue'
 import HeroHeader from '../components/HeroHeader.vue'
 import SliderHighlight from '../components/SliderHighlight.vue'
+import CardPacket from '../components/CardPacket.vue'
 </script>
 
 <template>
@@ -9,7 +10,8 @@ import SliderHighlight from '../components/SliderHighlight.vue'
     <!-- <div class="my-6"></div> -->
     <HeroHeader />
     
-    <div class="my-20"></div>
     <SliderHighlight />
+    
+    <CardPacket />
   </main>
 </template>
