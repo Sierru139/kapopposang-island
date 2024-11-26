@@ -26,7 +26,7 @@ export default {
         <RouterLink to="/galery">Galeri</RouterLink>
       </nav>
 
-      <nav class="flex gap-x-3 font-semibold md:hidden">
+      <nav class="flex gap-x-3 font-semibold hidden">
         <button>-</button>
         <div class="fixed right-0 top-0 bottom-0 w-fit bg-red-300 z-[9999] px-12"
               :class="{'hidden' : navOpen}">
